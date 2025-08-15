@@ -30,7 +30,8 @@ This function implements the ODE model, with its equations detailed in Supplemen
 This function loads the data from the ./code/mat/ folder needed for parameter calibration in the model.\
 ***(10).E2ICIpalboAZD_processdata()***\
 This function processes the experimental data.\
-
+***(11).E2ICIpalboAZD_cost()***\
+This function calculates the cost (error) between model simulation and experimental data.\
 
 
 
