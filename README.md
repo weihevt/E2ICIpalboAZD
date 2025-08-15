@@ -16,6 +16,8 @@ This function is for parameter estimation during optimization.\
 ***(5).E2ICIpalboAZD_1steadystate()***\
 This function checks whether two initial values—zero and a positive one 
 result in the same steady state rather than distinct ones.\
+***(6).E2ICIpalboAZD_replating()***\
+This function resets the initial cell number each month, simulating the replating done in the experiment.
 
 
 
