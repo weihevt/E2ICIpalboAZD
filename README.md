@@ -40,7 +40,7 @@ This function simulates alternating treatments.\
 This function plots the dynamics of certain compounds in the model for inspection.\
 ***(15).E2ICIpalboAZD_plotpro()***\
 This function plots the simulation results alongside the experimental data.\
-***(15).E2ICIpalboAZD_plotalterpro()***\
+***(16).E2ICIpalboAZD_plotalterpro()***\
 Plot the proliferation simulation results for the alternating treatment.\
 
 
