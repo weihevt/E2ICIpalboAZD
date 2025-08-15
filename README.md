@@ -20,10 +20,10 @@ result in the same steady state rather than distinct ones.\
 This function resets the initial cell number each month, simulating the replating done in the experiment.\
 ***(7).E2ICIpalboAZD_par()***\
 This function provides the parameter values used in the ODE model, 
-corresponding to Supplementary Table 2. It also relates to the ./mat/PAR.mat file, 
+corresponding to Supplementary Table 2. It also relates to the _./code/mat/PAR.mat_ file, 
 which saves the current fitted parameter values. The values listed here
-may not always be updated using the values in the _code/mat/PAR.mat_, but they correspond one-to-one, 
-and the parameters from _code/mat/PAR.mat_ are the ones actually used.
+may not always be updated using the values in the _./code/mat/PAR.mat_, but they correspond one-to-one, 
+and the parameters from _./code/mat/PAR.mat_ are the ones actually used.
 
 
 
