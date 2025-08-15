@@ -7,6 +7,6 @@ The _code_ folder contains the functions used in the work.
 ***(1).E2ICIpalboAZD_main()***\
 Main function to run the simulation. Generates plots for Figures 5A-F, 6E-F, Supplementary Figures 1A-D, and 2 using the single optimized parameter. These are primary simulation results, compared directly with experimental data.\
 ***(2).E2ICIpalboAZD_test()***\
-% This function estimates model parameters based on experimental data.
+This function estimates model parameters based on experimental data.
 
 
