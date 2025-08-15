@@ -41,6 +41,8 @@ This function plots the dynamics of certain compounds in the model for inspectio
 ***(15).E2ICIpalboAZD_plotpro()***\
 This function plots the simulation results alongside the experimental data.\
 ***(16).E2ICIpalboAZD_plotalterpro()***\
-Plot the proliferation simulation results for the alternating treatment.\
+This function plots the proliferation simulation results for the alternating treatment.\
+***(17).E2ICIpalboAZD_mutation()***\
+This self-modifying function is used as the mutation function within the genetic algorithm (ga).
 
 
