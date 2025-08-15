@@ -32,6 +32,13 @@ This function loads the data from the ./code/mat/ folder needed for parameter ca
 This function processes the experimental data.\
 ***(11).E2ICIpalboAZD_cost()***\
 This function calculates the cost (error) between model simulation and experimental data.\
-
+***(12).E2ICIpalboAZD_sim()***\
+This function simulates various treatment conditions.\
+***(13).E2ICIpalboAZD_simalternation()***\
+This function simulates alternating treatments.\
+***(14).E2ICIpalboAZD_simplotcheck()***\
+This function plots the dynamics of certain compounds in the model for inspection.\
+***(15).E2ICIpalboAZD_plotpro()***\
+This function plots the simulation results alongside the experimental data.
 
 
