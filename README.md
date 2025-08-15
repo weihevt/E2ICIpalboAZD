@@ -24,6 +24,8 @@ corresponding to Supplementary Table 2. It also relates to the _./code/mat/PAR.m
 which saves the current fitted parameter values. The values listed here
 may not always be updated using the values in the _./code/mat/PAR.mat_, but they correspond one-to-one, 
 and the parameters from _./code/mat/PAR.mat_ are the ones actually used.
+***(8).E2ICIpalboAZD_model***\
+The ODE model, with its equations detailed in Supplementary Note 2 of the paper.
 
 
 
