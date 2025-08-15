@@ -18,6 +18,12 @@ This function checks whether two initial values—zero and a positive one
 result in the same steady state rather than distinct ones.\
 ***(6).E2ICIpalboAZD_replating()***\
 This function resets the initial cell number each month, simulating the replating done in the experiment.
+***(7).E2ICIpalboAZD_par()***\
+This function provides the parameter values used in the ODE model, 
+corresponding to Supplementary Table 2. It also relates to the ./mat/PAR.mat file, 
+which save the current fitted parameter values. The values listed here
+may not always be updated using the values in the ./mat/PAR.mat, but they correspond one-to-one, 
+and the parameters from ./mat/PAR.mat are the ones actually used.
 
 
 
