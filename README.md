@@ -12,7 +12,7 @@ This function estimates model parameters based on experimental data.\
 ***(3).E2ICIpalboAZD_modelpar()***\
 This function generates the necessary given parameters for the model simulation.\
 ***(4).E2ICIpalboAZD_evlcost()***\
-This function is for parameter estimation during optimization.\
+This function is for parameter estimation during optimization. It calls the function _E2ICIpalboAZD_cost()_.\
 ***(5).E2ICIpalboAZD_1steadystate()***\
 This function checks whether two initial values—zero and a positive one 
 result in the same steady state rather than distinct ones.\
