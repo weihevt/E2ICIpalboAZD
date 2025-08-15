@@ -25,7 +25,7 @@ which saves the current fitted parameter values. The values listed here
 may not always be updated using the values in the _./code/mat/PAR.mat_, but they correspond one-to-one, 
 and the parameters from _./code/mat/PAR.mat_ are the ones actually used.\
 ***(8).E2ICIpalboAZD_model()***\
-The ODE model, with its equations detailed in Supplementary Note 2 of the paper.\
+% This function implements the ODE model, with its equations detailed in Supplementary Note 2 of the paper.\
 ***(9).E2ICIpalboAZD_loaddata()***\
 This function loads the data from the ./code/mat/ folder needed for parameter calibration in the model.\
 
