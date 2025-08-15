@@ -28,6 +28,8 @@ and the parameters from _./code/mat/PAR.mat_ are the ones actually used.\
 % This function implements the ODE model, with its equations detailed in Supplementary Note 2 of the paper.\
 ***(9).E2ICIpalboAZD_loaddata()***\
 This function loads the data from the ./code/mat/ folder needed for parameter calibration in the model.\
+***(10).E2ICIpalboAZD_processdata()***\
+This function processes the experimental data.\
 
 
 
