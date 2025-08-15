@@ -9,7 +9,7 @@ Main function to run the simulation. Generates plots for Figures 5A-F, 6E-F, Sup
 ***(2).E2ICIpalboAZD_test()***\
 This function estimates model parameters based on experimental data.\
 ***(3).E2ICIpalboAZD_modelpar()***\
-% This function generates the necessary given parameters for the model simulation.\
+This function generates the necessary given parameters for the model simulation.\
 
 
 
