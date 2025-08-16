@@ -56,6 +56,8 @@ This function is output function in the GA algorithm saves the parameter cohort 
 This function generates the parameter cohort and is called by _E2ICIpalboAZD_parcohort()_.\
 ***(23).E2ICIpalboAZD_doseresponse()***\
 This function loads data from the ./data/dose response/ folder and generates the raw plots for Fig. 3A–F.
+***(24). E2ICIpalboAZD_color()***\
+This function generates a set of colors that can potentially be used.\
 
 
 
