@@ -43,7 +43,7 @@ This function plots the simulation results alongside the experimental data.\
 ***(16).E2ICIpalboAZD_plotalterpro()***\
 This function plots the proliferation simulation results for the alternating treatment.\
 ***(17).E2ICIpalboAZD_mutation()***\
-This self-modifying function is used as the mutation function within the genetic algorithm (ga).
+This self-modifying function is used as the mutation function within the genetic algorithm (ga).\
 ***(18).E2ICIpalboAZD_minimumAZD_2treat()***\
 This function generates the treatment options shown in Fig.7A-C, selecting from three possible treatment choices.
 ***(19).E2ICIpalboAZD_minimumAZD_3treat()***\
