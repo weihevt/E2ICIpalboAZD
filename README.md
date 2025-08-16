@@ -45,11 +45,14 @@ This function plots the proliferation simulation results for the alternating tre
 ***(17).E2ICIpalboAZD_mutation()***\
 This self-modifying function is used as the mutation function within the genetic algorithm (ga).\
 ***(18).E2ICIpalboAZD_minimumAZD_2treat()***\
-This function generates the treatment options shown in Fig.7A-C, selecting from three possible treatment choices.
+This function generates the treatment options shown in Fig.7A-C, selecting from three possible treatment choices.\
 ***(19).E2ICIpalboAZD_minimumAZD_3treat()***\
-This function generates the treatment options shown in Fig. 7E–F, selecting from three possible treatment choices.
+This function generates the treatment options shown in Fig. 7E–F, selecting from three possible treatment choices.\
 ***(20).E2ICIpalboAZD_genparcohort()***\
-This function generates _./code/mat/opmat.mat_, the first step is to create the parameter cohort.
+This function generates _./code/mat/opmat.mat_, the first step is to create the parameter cohort.\
+***(21).E2ICIpalboAZD_gaoutput()***\
+% This function is output function in the GA algorithm saves the parameter cohort to ./code/mat/opmat.mat.
+
 
 
 
