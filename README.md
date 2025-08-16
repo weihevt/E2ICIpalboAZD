@@ -48,4 +48,11 @@ This self-modifying function is used as the mutation function within the genetic
 This function generates the treatment options shown in Fig.7A-C, selecting from three possible treatment choices.
 ***(19).E2ICIpalboAZD_minimumAZD_3treat()***\
 This function generates the treatment options shown in Fig. 7E–F, selecting from three possible treatment choices.
+***(20).E2ICIpalboAZD_genparcohort()***\
+This function generates _./code/mat/opmat.mat_, the first step is to create the parameter cohort.
+
+
+
+
+
 
