@@ -59,13 +59,17 @@ This function is output function in the GA algorithm saves the parameter cohort 
 ***(22).E2ICIpalboAZD_findcohort()***\
 This function generates the parameter cohort and is called by _E2ICIpalboAZD_parcohort()_.\
 ***(23).E2ICIpalboAZD_doseresponse()***\
-This function loads data from the ./data/dose response/ folder and generates the raw plots for Fig. 3A–F.\
+This function loads data from the _./data/dose response/_ folder and generates the raw plots for Fig. 3A–F.\
 ***(24). E2ICIpalboAZD_color()***\
 This function generates a set of colors that can potentially be used.\
 ***(25).E2ICIpalboAZD_changemedia()***\
 This function sets the time points when the media is changed. In the experiment, the media is replaced every 3–4 days.\
 ***(26).E2ICIpalboAZD_changemedia()***\
 This function generates a bar plot.
+***(27).E2ICIpalboAZD_assignval()***\
+This function maps variables in the mathematical model to their corresponding counterparts.
+
+
 
 
 
