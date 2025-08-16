@@ -51,7 +51,7 @@ This function generates the treatment options shown in Fig. 7E–F, selecting fr
 ***(20).E2ICIpalboAZD_genparcohort()***\
 This function generates _./code/mat/opmat.mat_, the first step is to create the parameter cohort.\
 ***(21).E2ICIpalboAZD_gaoutput()***\
-% This function is output function in the GA algorithm saves the parameter cohort to ./code/mat/opmat.mat.
+This function is output function in the GA algorithm saves the parameter cohort to ./code/mat/opmat.mat.
 
 
 
