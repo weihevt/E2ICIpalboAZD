@@ -65,9 +65,11 @@ This function generates a set of colors that can potentially be used.\
 ***(25).E2ICIpalboAZD_changemedia()***\
 This function sets the time points when the media is changed. In the experiment, the media is replaced every 3–4 days.\
 ***(26).E2ICIpalboAZD_changemedia()***\
-This function generates a bar plot.
+This function generates a bar plot.\
 ***(27).E2ICIpalboAZD_assignval()***\
-This function maps variables in the mathematical model to their corresponding counterparts.
+This function maps variables in the mathematical model to their corresponding counterparts.\
+***(28).E2ICIpalboAZD_simparcohort()***\
+This function simulates all parameter sets stored in ./code/mat/opmat.mat.
 
 
 
