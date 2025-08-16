@@ -2,6 +2,10 @@
 [08/07/2025] This repository contains the MATLAB (R2023a) code, which does not use external packages, for the paper titled
 "**WEE1 inhibition delays resistance to CDK4/6 inhibitor and antiestrogen treatment in estrogen receptor-positive MCF7 breast cancer cells: experiments and mathematical modeling**"
 
+<div align="center">
+<img src="/fig/Fig1.png" width="400" height="400" title="Graphical abstract">
+</div>
+
 The **code** folder contains the functions used in the work.\
 The **fig** folder contains the figures used in the paper.\
 **Functions:**\
