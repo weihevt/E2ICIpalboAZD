@@ -69,7 +69,7 @@ This function generates a bar plot.\
 ***(27).E2ICIpalboAZD_assignval()***\
 This function maps variables in the mathematical model to their corresponding counterparts.\
 ***(28).E2ICIpalboAZD_simparcohort()***\
-This function simulates all parameter sets stored in ./code/mat/opmat.mat.
+This function simulates all parameter sets stored in ./code/mat/opmat.mat.\
 ***(29).E2ICIpalboAZD_result()***\
 This function simulates each parameter set in _./code/mat/opmat.mat_ and is called by _E2ICIpalboAZD_simparcohort()_.
 
