@@ -2,7 +2,7 @@ function E2ICIpalboAZD_doseresponse()
 %% (23) Function index in the GitHub repository
 % This function loads data from the ./data/dose response/ folder and generates the raw plots for Fig. 3A–F.
 
-pathload = '../data/dose response/';
+pathload = '../mat/';
 pathsave = './rawfig/';
 if ~isfolder(pathsave)
     mkdir(pathsave);
