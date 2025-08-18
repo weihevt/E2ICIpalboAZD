@@ -1,5 +1,8 @@
 function ind = E2ICIpalboAZD_1steadystate(args)
-% Ensure that no two different initial values lead to two distinct steady states.
+%% (5) Function index in the GitHub repository
+% This function checks whether two initial values—zero and a positive one 
+% result in the same steady state rather than distinct ones.
+
 x0 = zeros(args.Numvariable,1);
 x0(args.E2mediaindex) = args.ValE2normal;
 x0 = E2ICIpalboAZD_replating(x0,args);

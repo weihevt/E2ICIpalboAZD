@@ -1,5 +1,7 @@
 function simresult = E2ICIpalboAZD_assignval(x,args)
-% Assign state variables from the mathematical model to their corresponding proteins.
+%% (27) Function index in the GitHub repository
+% This function maps variables in the mathematical model to their corresponding counterparts.
+
 cMyc = sum(x(:,args.ind_containcMyc),2);
 cyclinD1t = sum(x(:,args.ind_containcyclinD1,:),2);
 ppRb = sum(x(:,args.ind_containppRb,:),2);

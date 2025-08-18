@@ -1,4 +1,7 @@
 function E2ICIpalboAZD_simplotcheck()
+%% (14) Function index in the GitHub repository
+% This function plots the dynamics of certain compounds in the model for inspection.
+
 % Plot different compounds in the model.
 data = E2ICIpalboAZD_loaddata();
 args = E2ICIpalboAZD_modelpar();

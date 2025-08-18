@@ -1,10 +1,12 @@
 function E2ICIpalboAZD_main()
-% This is the main function to run the simulation.
-% This file generates the plots for Figures 6E and 6F, 
-% Supplementary Figures 1A–D, and Supplementary Figure 2, Figures 5A-F,
+%% (1) Function index in the GitHub repository
+% This function runs the simulation.
+% Generates plots for Figures 5A-F, 6E-F, Supplementary Figures 1A-D, and 2
+% using the single optimized parameter. These are primary simulation
+% results, compared directly with experimental data.
+
 % Load the experimental data.
 data = E2ICIpalboAZD_loaddata();
-
 args = E2ICIpalboAZD_modelpar();
 
 % initial value of variables

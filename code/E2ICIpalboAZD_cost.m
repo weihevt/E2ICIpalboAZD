@@ -29,9 +29,11 @@ function cost = E2ICIpalboAZD_cost(args,...                                     
                                    cellnum_ICI200nM_palbo50nM_d17,...           (30)
                                    cellnum_ICI200nM_palbo100nM_d17,...          (31)
                                    cellnum_ICI200nM_palbo300nM_d17)
-% Calculates the cost between model simulation and experimental data.
+%% (11) Function index in the GitHub repository
+% This function calculates the cost (error) between model simulation and experimental data.
+
 data = E2ICIpalboAZD_loaddata();
-data = E2ICIpalboAZD_modifydata(data);
+data = E2ICIpalboAZD_processdata(data);
 %% cost value of protein
 %% CyclinE1
 ind = 2;

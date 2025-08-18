@@ -1,5 +1,7 @@
 function [state,options,optchanged] = E2ICIpalboAZD_gaoutput(options,state,~,costthreshold)
-% Output function in the GA algorithm that saves the parameter cohort to ./mat/opmat.mat.
+%% (21) Function index in the GitHub repository
+% This function is output function in the GA algorithm saves the parameter cohort to ./code/mat/opmat.mat.
+
 format compact
 filename = './mat/opmat.mat';
 optchanged = [];

@@ -1,4 +1,7 @@
 function colormatrix = E2ICIpalboAZD_color()
+%% (24) Function index in the GitHub repository
+% This function generates a set of colors that can potentially be used.
+
 i = 1;
 colormatrix(i,:) = [0,0,0];i = i + 1;
 colormatrix(i,:) = [0,0,1];i = i + 1;

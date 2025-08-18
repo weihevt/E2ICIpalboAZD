@@ -1,6 +1,8 @@
 function mutationChildren = E2ICIpalboAZD_mutation(parents,options,GenomeLength,~,state,...
                                                    ~,thisPopulation,varargin)
-% Self-modifying mutation function used within the genetic algorithm.
+%% (17) Function index in the GitHub repository
+% This self-modifying function is used as the mutation function within the genetic algorithm (ga).
+
 % MUTATIONADAPTFEASIBLE Mutation operator for linearly constrained
 % optimization problems.
 % MUTATIONCHILDREN = MUTATIONADAPTFEASIBLE(PARENTS,OPTIONS,GENOMELENGTH,...

@@ -1,5 +1,7 @@
 function [tout,simout,xout,mse_use] = E2ICIpalboAZD_sim(x0,tspan,treat,args)
-% Function to simulate various treatment conditions.
+%% (12) Function index in the GitHub repository
+% This function simulates various treatment conditions.
+
 tstart = tspan(1);
 tspan = tspan - tstart;
 tout = nan(tspan(end)+1,1);

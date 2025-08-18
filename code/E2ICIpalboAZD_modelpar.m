@@ -1,5 +1,7 @@
 function args = E2ICIpalboAZD_modelpar()
-% This function generates the necessary parameters for the model simulation.
+%% (3) Function index in the GitHub repository
+% This function generates the necessary given parameters for the model simulation.
+
 pathload = './mat/';
 [~,lb,ub,grouppar,groupparall,power_ind] = E2ICIpalboAZD_par();
 PAR = load([pathload, 'PAR.mat']).PAR;

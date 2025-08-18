@@ -1,5 +1,7 @@
 function cost = E2ICIpalboAZD_evlcost(parop,args,ind,i_group,opt)
-% Function for parameter estimation during optimization.
+%% (4) Function index in the GitHub repository
+% This function is for parameter estimation during optimization. It calls
+% the function E2ICIpalboAZD_cost().
 if opt
    args.PAR(ind) = parop;
 end

@@ -1,4 +1,7 @@
 function E2ICIpalboAZD_barplot(data_mean,data_sem,data_label,title_str,ylabel_str,ylimval,positionval)
+%% (26) Function index in the GitHub repository
+% This function generates a bar plot.
+
 % Barplot
 figure
 b = bar(data_mean,0.9,'Linewidth',2);hold on

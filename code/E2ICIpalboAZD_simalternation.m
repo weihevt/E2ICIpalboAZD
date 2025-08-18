@@ -1,6 +1,6 @@
-function [tout,simout,xout,mse_use] =...
-          E2ICIpalboAZD_simalternation(x0,tspan,treatalter,cycletime,replate,args)
-% Function to simulate alternating treatments.
+function [tout,simout,xout,mse_use] = E2ICIpalboAZD_simalternation(x0,tspan,treatalter,cycletime,replate,args)
+%% (13) Function index in the GitHub repository
+% This function simulates alternating treatments.
 Num_cycle = ceil(tspan(end)/cycletime);
 totaltime = cycletime * Num_cycle;
 tin = tspan(1);

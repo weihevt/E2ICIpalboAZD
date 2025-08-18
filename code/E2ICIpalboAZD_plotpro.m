@@ -1,5 +1,8 @@
 function h = E2ICIpalboAZD_plotpro(ttimedata,expmean,expsem,cohort_t,cohort_x,index_mincost,...
     prctile50_or_min, prctile_low,prctile_high,titlename,plotind,xlimval,ylimval,xticklabeldata,color,varargin)
+%% (14) Function index in the GitHub repository
+% This function plots the simulation results alongside the experimental data.
+
 if isempty(varargin) || isempty(varargin{1})
     linsty = '-';
 else

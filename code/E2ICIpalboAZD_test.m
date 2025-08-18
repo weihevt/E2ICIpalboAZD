@@ -1,5 +1,7 @@
 function E2ICIpalboAZD_test()
-% This function is used to fit the parameters.
+%% (2) Function index in the GitHub repository
+% This function estimates model parameters based on experimental data.
+
 pathsave = './mat/';
 warning('off','all')
 

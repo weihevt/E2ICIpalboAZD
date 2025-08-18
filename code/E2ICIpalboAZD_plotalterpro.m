@@ -1,7 +1,8 @@
 function h = E2ICIpalboAZD_plotalterpro(ttimedata,expmean,expsem,cohort_t,cohort_x,index_mincost,...
     prctile50_or_min, prctile_low,prctile_high,titlename,plotind,xlimval,ylimval,xticklabeldata,...
     color,fontsize,varargin)
-% Plot the proliferation simulation results for the alternating treatment.
+%% (16) Function index in the GitHub repository
+% This function plots the proliferation simulation results for the alternating treatment.
 
 l1 = errorbar(-10,expmean(end),expsem(end),'color',color(1),'linestyle','-.','linewidth',2,...
     'marker','o','CapSize',0);

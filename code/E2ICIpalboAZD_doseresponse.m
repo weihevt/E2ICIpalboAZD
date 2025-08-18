@@ -1,6 +1,7 @@
-function E2ICIpalboAZD_doseresponse12month()
-%% raw plot for Fig.3A–F %%
-% Load data and save raw plot for Fig.3A–F.
+function E2ICIpalboAZD_doseresponse()
+%% (23) Function index in the GitHub repository
+% This function loads data from the ./data/dose response/ folder and generates the raw plots for Fig. 3A–F.
+
 pathload = '../data/dose response/';
 pathsave = './rawfig/';
 if ~isfolder(pathsave)

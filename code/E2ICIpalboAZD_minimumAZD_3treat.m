@@ -1,6 +1,9 @@
 function E2ICIpalboAZD_minimumAZD_3treat()
-% This function generates the treatment options shown in Fig.7E-F. It
-% includes only three options: E2(10nM)+palbo(750nM), E2(10nM)+ICI(750nM) and
+%% (19) Function index in the GitHub repository
+% This function generates the treatment options shown in Fig. 7E–F, 
+% selecting from three possible treatment choices.
+
+% It includes only three options: E2(10nM)+palbo(750nM), E2(10nM)+ICI(750nM) and
 % E2(10nM)+ICI(750nM)+AZD(250nM). Over a two-year period, the goal is to keep the maximum 
 % proliferation below 20.
 % I provide an initial treatment plan for the optimization, L_init
@@ -11,18 +14,26 @@ function E2ICIpalboAZD_minimumAZD_3treat()
 % 1: E2(10nM)+ICI(750nM) treatment.
 % 2: E2(10nM)+ICI(750nM)+AZD(250nM) treatment.
 
+format compact
 % File saves the final treatment selections.
 filename = './mat/Lop_3treat.mat';
 % File stores the treatment selections that meet the requirements during the optimization.
 filename_L = './mat/L_3treat.mat';
+pathsavexls = './xls/';
+pathload_optmat = './mat/opmat.mat';
+pathload_ind_opmat_maxcv = './mat/ind_opmat_maxcv.mat';
+if ~isfolder(pathsavexls)
+    mkdir(pathsavexls);
+end
 args = E2ICIpalboAZD_modelpar();
+
 % Based on the initial treatment plan explored, a maximum of 6 periods of 
 % E2(10nM)+ICI(750nM)+AZD(250nM) should be effective.
 
 Num_days = 28;
 Num_hours = 24; 
 Num_AZD = 6;
-flag_op = true;
+flag_op = false;
 if ~isfile(filename) || flag_op
     Num_month = 23;
     cellnum_thres = 20;
@@ -46,25 +57,45 @@ if ~isfile(filename) || flag_op
         save(filename,'Lop_3treat')
     end
 else
+    if ~isfile(pathload_ind_opmat_maxcv)
+        error(['You need to run the function E2ICIpalboAZD_simparcohort() first to generate ind_opmat_maxcv.mat,'...
+               'which selects the parameter set in opmat.mat with the maximum coefficient of variation.'])
+    end
+        ind_optmat_maxcv = load(pathload_ind_opmat_maxcv).ind_optmat_maxcv;
+    Percentage_min_all = load(pathload_ind_opmat_maxcv).Percentage_min_all;
+    [~, pos] = max(Percentage_min_all);
+    ind_opt = ind_optmat_maxcv(pos,:);
+    opmat = load(pathload_optmat);
+
+    population_select = opmat.populationT(ind_opt,:);
+    scores_select = opmat.scoresT(ind_opt);
+    if ~ismember(args.PAR',population_select,'rows')
+        [~, pos] = max(scores_select);
+        population_select(pos,:) = [];
+        population_select = [args.PAR';population_select];
+    else
+        [~,Locb] = ismember(args.PAR',population_select,'rows');
+    if Locb ~= 1
+        population_select([1 Locb],:) = population_select([Locb 1],:);
+    end
+    end
+    
+    Numparset = numel(ind_opt);
     Num_month = 24;   
-    Numparset = 100;
     L_ = load(filename);
     L_ = L_.Lop_3treat;
     cellnumAlter = zeros(Num_month*Num_days*Num_hours+1,Numparset);
     cdk6 = zeros(Num_days*Num_hours*(Num_month)+1,Numparset);
     cyclinE1 = zeros(Num_days*Num_hours*(Num_month)+1,Numparset);
 
-    opmat = load('opmat.mat');
-    par_cohort = opmat.populationT';
-    par_cohort = par_cohort(:,1:Numparset);
-    args_ = E2depICIpalbo_modelpar();
-    par_cohort(:,1) = args_.PAR;
+    par_cohort = population_select';
+    args_ = E2ICIpalboAZD_modelpar();
     for i = 1:size(par_cohort,2)
         disp(i/100)
         i_args = args_;
         i_args.PAR = par_cohort(:,i);
 
-        [i_cellnum,i_t,i_x] = child_sim(L_,i_args);
+        [i_cellnum,i_t,i_x] = child_sim(L_,i_args,Num_days,Num_hours);
 
         i_cdk6 = sum(i_x(:,i_args.ind_containcdk6),2);
         i_cdk6 = i_cdk6./i_cdk6(1);
@@ -86,41 +117,41 @@ else
 
     cellnumAlter_min = min(cellnumAlter,[],2);
     cellnumAlter_max = max(cellnumAlter,[],2);
-    cellnumAlter = [i_t,cellnumAlter_min,cellnumAlter_max];
+    cellnumAlter = [i_t,cellnumAlter_min,cellnumAlter_max,cellnumAlter(:,1)];
 
     cdk6_min = min(cdk6,[],2);
     cdk6_max = max(cdk6,[],2);
-    cdk6 = [i_t,cdk6_min,cdk6_max];
+    cdk6 = [i_t,cdk6_min,cdk6_max,cdk6(:,1)];
 
     cyclinE1_min = min(cyclinE1,[],2);
     cyclinE1_max = max(cyclinE1,[],2);
-    cyclinE1 = [i_t,cyclinE1_min,cyclinE1_max];
+    cyclinE1 = [i_t,cyclinE1_min,cyclinE1_max,cyclinE1(:,1)];
     
-    cellnumAlter_ = zeros(Num_hours*args.daypermonth+2,Num_month*2);
-    cdk6_ = zeros(Num_hours*args.daypermonth+2,Num_month*2);
-    cyclinE1_ = zeros(Num_hours*args.daypermonth+2,Num_month*2);
+    Num_eachmonth = 3; % Number of columns per month
+    cellnumAlter_ = zeros(Num_hours*args.daypermonth+2,Num_month*Num_eachmonth);
+    cdk6_ = zeros(Num_hours*args.daypermonth+2,Num_month*Num_eachmonth);
+    cyclinE1_ = zeros(Num_hours*args.daypermonth+2,Num_month*Num_eachmonth);
     for i = 1:Num_month
         t_sel = (i-1)*Num_hours*args.daypermonth:i*Num_hours*args.daypermonth;
         pos = ismember(i_t,t_sel);
-        i_cellnumAlter = cellnumAlter(pos,2:3);
-        i_cdk6 = cdk6(pos,2:3);
-        i_cyclinE1 = cyclinE1(pos,2:3);
+        i_cellnumAlter = cellnumAlter(pos,2:end);
+        i_cdk6 = cdk6(pos,2:end);
+        i_cyclinE1 = cyclinE1(pos,2:end);
 
-        i_cellnumAlter(1,:) = [1,1];
-        i_cellnumAlter = [i,i;i_cellnumAlter];
-        i_cdk6 = [i,i;i_cdk6];
-        i_cyclinE1 = [i,i;i_cyclinE1];
-        cellnumAlter_(:,[1,2]+(i-1)*2) = i_cellnumAlter;
-        cdk6_(:,[1,2]+(i-1)*2) = i_cdk6;
-        cyclinE1_(:,[1,2]+(i-1)*2) = i_cyclinE1;
+        i_cellnumAlter(1,:) = ones(1,Num_eachmonth);
+        i_cellnumAlter = [i*ones(1,Num_eachmonth);i_cellnumAlter];
+        i_cdk6 = [i*ones(1,Num_eachmonth);i_cdk6];
+        i_cyclinE1 = [i*ones(1,Num_eachmonth);i_cyclinE1];
+        cellnumAlter_(:,(1:Num_eachmonth)+(i-1)*Num_eachmonth) = i_cellnumAlter;
+        cdk6_(:,(1:Num_eachmonth)+(i-1)*Num_eachmonth) = i_cdk6;
+        cyclinE1_(:,(1:Num_eachmonth)+(i-1)*Num_eachmonth) = i_cyclinE1;
     end
 
-    writematrix(cellnumAlter_,'cellnumAlter_minAZD_3treat.xls')
-    writematrix(cdk6_,'cdk6_minAZD_3treat.xls')
-    writematrix(cyclinE1_,'cyclinE1_minAZD_3treat.xls')
-    writematrix(L_,'treat_minAZD_3treat.xls')
+    writematrix(cellnumAlter_,[pathload_optmat,'cellnumAlter_minAZD_3treat.xls'])
+    writematrix(cdk6_,[pathload_optmat,'cdk6_minAZD_3treat.xls'])
+    writematrix(cyclinE1_,[pathload_optmat,'cyclinE1_minAZD_3treat.xls'])
+    writematrix(L_,[pathload_optmat,'treat_minAZD_3treat.xls'])
 end
-
 end
 
 function AZDdose = child_dose(x)

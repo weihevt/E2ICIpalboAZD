@@ -1,13 +1,19 @@
 function [PAR,lb,ub,grouppar,groupparall,power_ind] = E2ICIpalboAZD_par()
-% Parameters used in the ODE model.
-PAR = nan(200,1);
-lb = nan(200,1);
-ub = nan(200,1);
+%% (7) Function index in the GitHub repository
+% This function provides the parameter values used in the ODE model, 
+% corresponding to Supplementary Table 2. It also relates to the ./mat/PAR.mat file, 
+% which saves the current fitted parameter values. The values listed here
+% may not always be updated using the values in the ./mat/PAR.mat, but they correspond one-to-one, 
+% and the parameters from ./mat/PAR.mat are the ones actually used.
+
+PAR = nan(200,1); % PAR values
+lb = nan(200,1);  % lower bound
+ub = nan(200,1);  % upper bound
 %% E2, ER
 % (1).Diffusion rate of E2
 k_diff = 3.65941800299408;
-lbi = 3.8;
-ubi = 5;
+lbi = 3.5;
+ubi = 5.5;
 [PAR,lb,ub] = child_assign(k_diff,lbi,ubi,PAR,lb,ub);
 clearvars k_diff lbi ubi
 
@@ -126,7 +132,7 @@ clearvars p_cyclinD1_E2ER_1 lbi ubi
 % (18).Parameter 2 of cyclinD1 increased by E2ER
 p_cyclinD1_E2ER_2 = 8.37404722411972;
 lbi = 7;
-ubi = 10;
+ubi = 10.5;
 [PAR,lb,ub] = child_assign(p_cyclinD1_E2ER_2,lbi,ubi,PAR,lb,ub);
 clearvars p_cyclinD1_E2ER_2 lbi ubi
 %% rescdk6ICI
@@ -258,7 +264,7 @@ clearvars kub_cyclinD1cdk46p21 lbi ubi
 
 % (37).Binding rate between cyclinD1cdk46p21 and palbo
 kb_cyclinD1cdk46p21palbo = 0.112513615789783;
-lbi = 19;
+lbi = 18;
 ubi = 25;
 [PAR,lb,ub] = child_assign(kb_cyclinD1cdk46p21palbo,lbi,ubi,PAR,lb,ub);
 clearvars kb_cyclinD1cdk46p21palbo lbi ubi
@@ -314,15 +320,15 @@ clearvars k_cMycppRb lbi ubi
 
 % (45).Parameter 1 of cMyc increased by ppRb
 p_cMycppRb_1 = 13.0047726406011;
-lbi = 12;
+lbi = 11;
 ubi = 20;
 [PAR,lb,ub] = child_assign(p_cMycppRb_1,lbi,ubi,PAR,lb,ub);
 clearvars p_cMycppRb_1 lbi ubi
 
 % (46).Parameter 2 of cMyc increased by ppRb
 p_cMycppRb_2 = 3.46370441034343;
-lbi = 4;
-ubi = 6;
+lbi = 3;
+ubi = 6.5;
 [PAR,lb,ub] = child_assign(p_cMycppRb_2,lbi,ubi,PAR,lb,ub);
 clearvars p_cMycppRb_2 lbi ubi
 %% p21
@@ -343,7 +349,7 @@ clearvars p_p21cMyc_1 lbi ubi
 % (49).Parameter 2 of p21 inhibited by cMyc
 p_p21cMyc_2 = 4.67984238680879;
 lbi = 3;
-ubi = 5;
+ubi = 5.5;
 [PAR,lb,ub] = child_assign(p_p21cMyc_2,lbi,ubi,PAR,lb,ub);
 clearvars p_p21cMyc_2 lbi ubi
 
@@ -398,7 +404,7 @@ clearvars p_kdrescyclinEpalbo_2 lbi ubi
 
 % (57).Decreasing rate of rescyclinE1palbo by AZD
 kd_rescyclinEpalboAZD = 10.5417039282837;
-lbi = 8;
+lbi = 7;
 ubi = 12;
 [PAR,lb,ub] = child_assign(kd_rescyclinEpalboAZD,lbi,ubi,PAR,lb,ub);
 clearvars kd_rescyclinEpalboAZD lbi ubi
@@ -497,7 +503,7 @@ clearvars p_RbppRb_1 lbi ubi
 % (71).Parameter 2 of Rb increased by ppRb
 p_RbppRb_2 = 8.99853354363644;
 lbi = 7;
-ubi = 10;
+ubi = 10.5;
 [PAR,lb,ub] = child_assign(p_RbppRb_2,lbi,ubi,PAR,lb,ub);
 clearvars p_RbppRb_2 lbi ubi
 
@@ -511,7 +517,7 @@ clearvars k_RbcyclinD1cdk4 lbi ubi
 % (73).Parameter 1 of cyclinD1cdk4 kinase activity
 p_cyclinD1cdk4_1 = 119.992275942816;
 lbi = 800;
-ubi = 1050;
+ubi = 1100;
 [PAR,lb,ub] = child_assign(p_cyclinD1cdk4_1,lbi,ubi,PAR,lb,ub);
 clearvars p_cyclinD1cdk4_1 lbi ubi
 
@@ -616,7 +622,7 @@ clearvars p_proppRb_2 lbi ubi
 % (88).Proliferation rate increased by cyclinE1
 k_procyclinE1 = 0.634724462350517; 
 lbi = 6;
-ubi = 10;
+ubi = 10.5;
 [PAR,lb,ub] = child_assign(k_procyclinE1,lbi,ubi,PAR,lb,ub);
 clearvars k_procyclinE1 lbi ubi
 
@@ -643,14 +649,14 @@ clearvars k_carrying lbi ubi
 
 % (92).Death rate
 k_death = 0.000199950218200684;
-lbi = 2e-4;
-ubi = 4e-4;
+lbi = 1.9e-4;
+ubi = 3e-4;
 [PAR,lb,ub] = child_assign(k_death,lbi,ubi,PAR,lb,ub);
 clearvars k_death lbi ubi
 
 % (93).Lysis rate of dead cell
 k_lysing = 0.00592092974785044;
-lbi = 0.0003;
+lbi = 0.0002;
 ubi = 0.0005;
 [PAR,lb,ub] = child_assign(k_lysing,lbi,ubi,PAR,lb,ub);
 clearvars k_lysing lbi ubi

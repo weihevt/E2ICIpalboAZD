@@ -1,5 +1,7 @@
 function data = E2ICIpalboAZD_loaddata()
-% Load the data required for parameter calibration in the model.
+%% (9) Function index in the GitHub repository
+% This function loads the data from the ./code/mat/ folder needed for parameter calibration in the model.
+
 pathload = './mat/';
 %% protein westernblot
 protein = load([pathload,'Outprotein.mat']);

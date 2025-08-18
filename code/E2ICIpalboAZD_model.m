@@ -1,5 +1,7 @@
 function x_output = E2ICIpalboAZD_model(t,x,treat,PAR)
-% The ODE model, with equations provided in the supplemental file of the paper.
+%% (8) Function index in the GitHub repository
+% This function implements the ODE model, with its equations detailed in Supplementary Note 2 of the paper.
+
 %% treat
 ICI = treat.ICI;
 palbo = treat.palbo;
