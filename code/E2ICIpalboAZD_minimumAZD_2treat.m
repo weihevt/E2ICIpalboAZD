@@ -124,6 +124,7 @@ else
     Num_month = 24;
     L_ = load(filename);
     L_ = L_.Lop_2treat;
+    L_ = [0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,1,0,0,1,0,0];
     tspan = [0,Num_month*Num_days*Num_hours];
     cellnumAlter = zeros(Num_month*Num_days*Num_hours+1,Numparset);
     cdk6 = zeros(Num_month*Num_days*Num_hours+1, Numparset);
@@ -224,9 +225,9 @@ else
         cyclinE1_(:,(1:Num_eachmonth)+(i-1)*Num_eachmonth) = i_cyclinE1;
     end
 
-    writematrix(cellnumAlter_,[pathload_optmat,'cellnumAlter_minAZD_2treat.xls'])
-    writematrix(cdk6_,[pathload_optmat,'cdk6_minAZD_2treat.xls'])
-    writematrix(cyclinE1_,[pathload_optmat,'cyclinE1_minAZD_2treat.xls'])
-    writematrix(L_,[pathload_optmat,'treat_minAZD_2treat.xls'])
+    writematrix(cellnumAlter_,[pathsavexls,'cellnumAlter_minAZD_2treat.xls'])
+    writematrix(cdk6_,[pathsavexls,'cdk6_minAZD_2treat.xls'])
+    writematrix(cyclinE1_,[pathsavexls,'cyclinE1_minAZD_2treat.xls'])
+    writematrix(L_,[pathsavexls,'treat_minAZD_2treat.xls'])
 end
 end

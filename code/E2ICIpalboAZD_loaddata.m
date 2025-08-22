@@ -68,9 +68,13 @@ E210nM_palbo1uM_pro = child_mean(Cellnum_E210nM_palbo1uM.pro);
 E210nM_day11_pro = child_mean(Cellnum_E210nM_day11.pro);
 % (21)Synergy palbo ICI
 Synergy_ICI200nM_17day_pro = child_mean(Synergy_ICI200nM_17day(:));
+Synergy_ICI200nM_17day_pro.data = Synergy_ICI200nM_17day;
 Synergy_palbo50nM_17day_pro = child_mean(Synergy_ICIpalbo_palbo50nM_17day(:));
+Synergy_palbo50nM_17day_pro.data = Synergy_ICIpalbo_palbo50nM_17day;
 Synergy_palbo100nM_17day_pro = child_mean(Synergy_ICIpalbo_palbo100nM_17day(:));
+Synergy_palbo100nM_17day_pro.data = Synergy_ICIpalbo_palbo100nM_17day;
 Synergy_palbo300nM_17day_pro = child_mean(Synergy_ICIpalbo_palbo300nM_17day(:));
+Synergy_palbo300nM_17day_pro.data = Synergy_ICIpalbo_palbo300nM_17day;
 
 data.Cdk6 = Cdk6; 
 clearvars Cdk6
