@@ -57,7 +57,7 @@ This function generates _./code/mat/opmat.mat_, the first step is to create the 
 ***(21).E2ICIpalboAZD_gaoutput()***\
 This function is output function in the GA algorithm saves the parameter cohort to ./code/mat/opmat.mat.\
 ***(22).E2ICIpalboAZD_findcohort()***\
-This function generates the parameter cohort and is called by _E2ICIpalboAZD_parcohort()_.\
+This function generates the parameter cohort and is called by _E2ICIpalboAZD_genparcohort()_.\
 ***(23).E2ICIpalboAZD_doseresponse()***\
 This function generates the raw plots for Fig. 3A–F.\
 ***(24). E2ICIpalboAZD_color()***\
