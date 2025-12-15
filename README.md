@@ -71,7 +71,7 @@ This function maps variables in the mathematical model to their corresponding co
 ***(28).E2ICIpalboAZD_simparcohort()***\
 This function simulates all parameter sets stored in _./code/mat/opmat.mat_.\
 ***(29).E2ICIpalboAZD_result()***\
-This function simulates each parameter set in _./code/mat/opmat.mat_ and is called by _E2ICIpalboAZD_simparcohort()_.
+This function simulates each parameter set in _./code/mat/opmat.mat_ and is called by _E2ICIpalboAZD_simparcohort()_.\
 ***(30).E2ICIpalboAZD_plot()***\
 This function plots the simulation results from the parameter cohort. These are the results included in the paper.
 
