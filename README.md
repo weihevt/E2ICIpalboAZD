@@ -3,7 +3,7 @@
 "**WEE1 inhibition delays resistance to CDK4/6 inhibitor and antiestrogen treatment in estrogen receptor-positive MCF7 breast cancer cells: experiments and mathematical modeling.**"
 
 <div align="center">
-<img src="/fig/Fig1.png" width="600" height="600" title="Graphical abstract">
+<img src="/Fig/Fig1.png" width="600" height="600" title="Graphical abstract">
 </div>
 
 The **code** folder contains the functions used in the work.\
