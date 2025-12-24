@@ -1,6 +1,6 @@
-## WEE1 inhibition delays resistance in ER+ MCF7 breast cancer
-[08/07/2025] This repository contains the MATLAB (R2023a) code, which does not use external packages, for the paper titled
-"**WEE1 inhibition delays resistance to CDK4/6 inhibitor and antiestrogen treatment in estrogen receptor-positive MCF7 breast cancer cells: experiments and mathematical modeling.**"
+## WEE1 inhibition delays resistance to CDK4/6 inhibitor and antiestrogen treatment in ER+ MCF7 cells
+[12/24/2025] This repository contains the MATLAB (R2023a) code for the paper titled
+["**WEE1 inhibition delays resistance to CDK4/6 inhibitor and antiestrogen treatment in ER+ MCF7 cells.**"](https://www.nature.com/articles/s41540-025-00604-z)
 
 <div align="center">
 <img src="/fig/Fig1.png" width="600" height="600" title="Graphical abstract">
