@@ -80,7 +80,8 @@ This function simulates alternating treatments.\
 This function simulates all parameter sets stored in **_./code/mat/opmat.mat_**.\
 ***(33).E2ICIpalboAZD_33_simplotcheck()***\
 This function plots the dynamics of certain compounds in the model for inspection.\
-
+***Citation***:\
+He W, Demas DM, Kraikivski P, Shajahan-Haq AN, Baumann WT. WEE1 inhibition delays resistance to CDK4/6 inhibitor and antiestrogen treatment in ER+ MCF7 cells. npj Syst Biol Appl. 2025 Nov 17;11(1):128. 
 
 
 
