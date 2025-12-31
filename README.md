@@ -24,6 +24,8 @@ Fig.S2: Generated using GraphPad, with the corresponding data table saved in the
 **Functions:**\
 ***(1).E2ICIpalboAZD_01_main()***\
 This function runs the simulation and produces plots using the optimized parameter set.\
+***(2).E2ICIpalboAZD_02_readcellnum()***\
+This function loads cell count data from the **_./data/coulter counter_** directory and saves it as a .mat file in **_./code/mat/Outcellnum.mat_** for use in model parameter fitting.\
 ***(3).E2ICIpalboAZD_03_readdata_western()***\
 This function loads western blot data from the **_./data/western blot_** directory and saves it as a .mat file in **_./code/mat/Outprotein.mat_** for use in model parameter fitting.\
 ***(4).E2ICIpalboAZD_04_par()***\
