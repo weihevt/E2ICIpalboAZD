@@ -24,6 +24,8 @@ Fig.S2: Generated using GraphPad, with the corresponding data table saved in the
 **Functions:**\
 ***(1).E2ICIpalboAZD_01_main()***\
 This function runs the simulation and produces plots using the optimized parameter set.\
+***(3).E2ICIpalboAZD_03_readdata_western()***\
+This function loads western blot data from the **_./data/western blot_** directory and saves it as a .mat file in **_./code/mat/Outprotein.mat_** for use in model parameter fitting.
 ***(4).E2ICIpalboAZD_04_par()***\
 This function provides the parameter values used in the ODE model, corresponding to the Supplementary Table 2 in the paper.\
 ***(5).E2ICIpalboAZD_05_modelpar()***\
